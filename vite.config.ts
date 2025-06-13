@@ -4,6 +4,7 @@ import solid from 'vite-plugin-solid'
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  base: '/onclo-web/',
   plugins: [solid(), VitePWA({
     registerType: 'prompt',
     injectRegister: false,
