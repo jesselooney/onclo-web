@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@solidjs/router": "^0.15.3",
+    "feather-icons": "^4.29.2",
     "normalize.css": "^8.0.1",
     "solid-js": "^1.9.4"
   },

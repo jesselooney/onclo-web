@@ -8,5 +8,5 @@ import SessionManager from './pages/SessionManager.tsx'
 const root = document.getElementById('root')
 
 render(() => <Router base={import.meta.env.BASE_URL} root={App}>
-  <Route path="/" component={SessionManager} />
+  <Route path="/track" component={SessionManager} />
 </Router>, root!)

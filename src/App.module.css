@@ -1,0 +1,30 @@
+.Header {
+  width: 100%;
+  background-color: var(--secondary);
+}
+
+.Main {
+  width: 100%;
+  flex-grow: 1;
+}
+
+.Navigation {
+  width: 100%;
+  padding-top: 10px;
+  padding-bottom: 20px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: var(--secondary);
+}
+
+.NavItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: var(--primary);
+  text-decoration: none;
+}
+.NavItem.NavItem__Active {
+  color: var(--accent);
+}
