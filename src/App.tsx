@@ -1,5 +1,4 @@
 import PWABadge from './PWABadge.tsx'
-import './App.css'
 import { A } from '@solidjs/router'
 
 function App(props: any) {

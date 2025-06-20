@@ -15,6 +15,9 @@ importers:
       '@solidjs/router':
         specifier: ^0.15.3
         version: 0.15.3(solid-js@1.9.7)
+      normalize.css:
+        specifier: ^8.0.1
+        version: 8.0.1
       solid-js:
         specifier: ^1.9.4
         version: 1.9.7
@@ -1585,6 +1588,9 @@ packages:
 
   node-releases@2.0.19:
     resolution: {integrity: sha512-xxOWJsBKtzAq7DY0J+DTzuz58K8e7sJbdgwkbMWQe8UYB6ekmsQ45q0M/tJDsGaZmbC+l7n57UV8Hl5tHxO9uw==}
+
+  normalize.css@8.0.1:
+    resolution: {integrity: sha512-qizSNPO93t1YUuUhP22btGOo3chcvDFqFaj2TRybP0DMxkHOCTYwp3n34fel4a31ORXy4m1Xq0Gyqpb5m33qIg==}
 
   object-inspect@1.13.4:
     resolution: {integrity: sha512-W67iLl4J2EXEGTbfeHCffrjDfitvLANg0UlX3wFUUSTx92KXRFegMHUVgSqE+wvhAbi4WqjGg9czysTV2Epbew==}
@@ -3777,6 +3783,8 @@ snapshots:
   node-addon-api@6.1.0: {}
 
   node-releases@2.0.19: {}
+
+  normalize.css@8.0.1: {}
 
   object-inspect@1.13.4: {}
 
