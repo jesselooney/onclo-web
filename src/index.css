@@ -1,5 +1,13 @@
 :root {
+  --text: #d8fcfd;
+  --background: #022021;
+  --primary: #6febf8;
+  --secondary: #603a49;
+  --accent: #f5be37;
+
   font-family: Inter, system-ui, sans-serif;
+  color: var(--text);
+  background-color: var(--background);
 
   /* See https://www.w3.org/TR/WCAG21/#text-spacing */
   line-height: 1.5;
