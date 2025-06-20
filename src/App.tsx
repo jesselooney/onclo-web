@@ -1,6 +1,10 @@
 import PWABadge from './PWABadge.tsx'
 import { A } from '@solidjs/router'
 import styles from './App.module.css'
+import featherSpriteUrl from '/public/feather-sprite.svg'
+
+const clockIconUrl = featherSpriteUrl + "#clock"
+const eyeIconUrl = featherSpriteUrl + "#eye"
 
 function App(props: any) {
   return (
@@ -14,13 +18,13 @@ function App(props: any) {
       <nav class={styles.Navigation}>
         <A href="/track" activeClass={`${styles.NavItem} ${styles.NavItem__Active}`} inactiveClass={styles.NavItem}>
           <svg class="feather">
-            <use href="node_modules/feather-icons/dist/feather-sprite.svg#clock" />
+            <use href={clockIconUrl} />
           </svg>
           <span>Track</span>
         </A>
         <A href="/analyze" activeClass={`${styles.NavItem} ${styles.NavItem__Active}`} inactiveClass={styles.NavItem}>
           <svg class="feather">
-            <use href="node_modules/feather-icons/dist/feather-sprite.svg#eye" />
+            <use href={eyeIconUrl} />
           </svg>
           <span>Analyze</span>
         </A>
