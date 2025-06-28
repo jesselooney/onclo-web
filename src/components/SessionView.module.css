@@ -1,0 +1,13 @@
+.SessionView {
+  margin: 0.5em 0;
+}
+
+.Time {
+  margin-right: 0.5em;
+  padding: 0.1em 0.15em;
+  border-radius: var(--border-radius);
+  background-color: var(--primary);
+}
+
+.Activity {
+}

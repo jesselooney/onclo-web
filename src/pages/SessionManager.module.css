@@ -1,0 +1,27 @@
+.SessionList {
+  list-style-type: disc;
+  list-style-position: inside;
+}
+
+.SessionSubmitInput {
+}
+
+.SessionSubmitInput__TextInput {
+  padding: 0.1em 0.5em;
+  border: none;
+  border-radius: var(--border-radius);
+  background-color: var(--background-lighter);
+}
+.SessionSubmitInput__TextInput:focus {
+  outline: none;
+}
+
+.SessionSubmitInput__SubmitButton {
+  /* TODO: these dimensions should be equal to height of textbox. use CSS var? */
+  margin-left: 0.5em;
+  width: 1.6em;
+  height: 1.6em;
+  border: none;
+  background-color: var(--primary);
+  border-radius: 50%;
+}

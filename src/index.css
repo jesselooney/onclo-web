@@ -1,9 +1,11 @@
 :root {
-  --text: #d8fcfd;
-  --background: #022021;
-  --primary: #6febf8;
-  --secondary: #603a49;
-  --accent: #f5be37;
+  /* colors currently from gruvbox */
+  --text: #fbf1c7;
+  --background: #282828;
+  --background-lighter: #3c3836;
+  --primary: #458588;
+  --accent: #d79921;
+  --border-radius: 4px;
 
   font-family: Inter, system-ui, sans-serif;
   color: var(--text);
@@ -28,6 +30,15 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+}
+
+/* See https://www.joshwcomeau.com/css/custom-css-reset/#seven-inherit-fonts-for-form-controls-8 */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+  color: inherit;
 }
 
 #root {
