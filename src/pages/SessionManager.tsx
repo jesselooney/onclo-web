@@ -51,7 +51,7 @@ function SessionManager() {
     if (document.activeElement instanceof HTMLElement)
       document.activeElement.blur()
   }
-  const [suggestions, setSuggestions] = createStore<string[]>(["suggestion one", "yeet"])
+  const [suggestions, _] = createStore<string[]>(["suggestion one", "yeet"])
 
   return (
     <SessionsContext.Provider value={[sessions, setSessions]}>
