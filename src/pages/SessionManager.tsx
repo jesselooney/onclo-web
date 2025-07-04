@@ -84,7 +84,7 @@ function SessionManager() {
             </ol>
           </Match>
         </Switch>
-        <div>{height()}</div>
+        <div>height: {height()}</div>
         <div class={styles.SessionSubmitInput}>
           <input
             class={styles["SessionSubmitInput__TextInput"]}
