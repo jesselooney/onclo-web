@@ -53,6 +53,9 @@ function SessionManager() {
   }
   const [suggestions, _] = createStore<string[]>(["suggestion one", "yeet"])
 
+  const [height, setHeight] = createSignal(0);
+  setInterval(() => setHeight(window.innerHeight), 100)
+
   return (
     <SessionsContext.Provider value={[sessions, setSessions]}>
       <section class={styles.SessionManager}>
@@ -81,6 +84,7 @@ function SessionManager() {
             </ol>
           </Match>
         </Switch>
+        <div>{height()}</div>
         <div class={styles.SessionSubmitInput}>
           <input
             class={styles["SessionSubmitInput__TextInput"]}
