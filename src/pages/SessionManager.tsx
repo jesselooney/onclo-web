@@ -55,42 +55,43 @@ function SessionManager() {
 
   return (
     <SessionsContext.Provider value={[sessions, setSessions]}>
-      <h1>Session Manager</h1>
-      <Switch>
-        <Match when={!isSearching()}>
-          <ol class={styles.SessionList}>
-            <For each={sessions}>
-              {session =>
-                <li>
-                  <SessionView session={session} />
-                </li>
-              }
-            </For>
-          </ol>
-        </Match>
-        <Match when={isSearching()}>
-          <ol class={styles.ActivitySuggestionList}>
-            <For each={suggestions}>
-              {
-                (suggestion, _) =>
-                  <li onClick={() => { setText(suggestion); submitSession() }}>
-                    {suggestion}
+      <section class={styles.SessionManager}>
+        <Switch>
+          <Match when={!isSearching()}>
+            <ol class={styles.SessionList}>
+              <For each={sessions}>
+                {session =>
+                  <li class={styles.SessionList__ListItem}>
+                    <SessionView session={session} />
                   </li>
-              }
-            </For>
-          </ol>
-        </Match>
-      </Switch>
-      <div class={styles.SessionSubmitInput}>
-        <input
-          class={styles["SessionSubmitInput__TextInput"]}
-          onInput={e => setText(e.target.value)}
-          onKeyDown={e => { if (e.key === "Enter") submitSession() }}
-          onFocusIn={() => startSearching()}
-          value={text()}
-        />
-        <button class={styles["SessionSubmitInput__SubmitButton"]} onClick={submitSession}>^</button>
-      </div>
+                }
+              </For>
+            </ol>
+          </Match>
+          <Match when={isSearching()}>
+            <ol class={styles.ActivitySuggestionList}>
+              <For each={suggestions}>
+                {
+                  (suggestion, _) =>
+                    <li class={styles.ActivitySuggestionList__ListItem} onClick={() => { setText(suggestion); submitSession() }}>
+                      {suggestion}
+                    </li>
+                }
+              </For>
+            </ol>
+          </Match>
+        </Switch>
+        <div class={styles.SessionSubmitInput}>
+          <input
+            class={styles["SessionSubmitInput__TextInput"]}
+            onInput={e => setText(e.target.value)}
+            onKeyDown={e => { if (e.key === "Enter") submitSession() }}
+            onFocusIn={() => startSearching()}
+            value={text()}
+          />
+          <button class={styles["SessionSubmitInput__SubmitButton"]} onClick={submitSession}>^</button>
+        </div>
+      </section>
     </SessionsContext.Provider>
   )
 }

@@ -4,8 +4,7 @@
 }
 
 .Main {
-  margin: 0 1em;
-  width: 100%;
+  margin: 1em;
   flex-grow: 1;
 }
 
