@@ -4,10 +4,10 @@ import { onCleanup, onMount } from 'solid-js'
 import styles from './App.module.css'
 
 function App(props: any) {
-  const updateHeight = () => document.getElementById("root")!.style.height = `${window.innerHeight}px`
+  const updateHeight = () => document.getElementById("root")!.style.height = `${window.visualViewport!.height}px`
 
-  onMount(() => window.addEventListener("resize", updateHeight))
-  onCleanup(() => window.removeEventListener("resize", updateHeight))
+  onMount(() => window.visualViewport!.addEventListener("resize", updateHeight))
+  onCleanup(() => window.visualViewport!.removeEventListener("resize", updateHeight))
 
   return (
     <>

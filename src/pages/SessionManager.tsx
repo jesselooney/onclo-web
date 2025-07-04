@@ -1,5 +1,5 @@
 import { DateTime } from "luxon"
-import { For, Switch, Match, createMemo, createSignal } from "solid-js"
+import { For, Switch, Match, createMemo, createSignal, onMount, onCleanup } from "solid-js"
 import SessionView from "../components/SessionView";
 import { Session } from "../models/session";
 import { SessionsContext } from "../sessionsContext";
@@ -54,7 +54,10 @@ function SessionManager() {
   const [suggestions, _] = createStore<string[]>(["suggestion one", "yeet"])
 
   const [height, setHeight] = createSignal("");
-  setInterval(() => setHeight(document.getElementById("root")!.style.height), 100)
+
+  onMount(() =>
+    setInterval(() => setHeight(document.getElementById("root")!.style.height), 100))
+  onCleanup(() => clearInterval)
 
   return (
     <SessionsContext.Provider value={[sessions, setSessions]}>
