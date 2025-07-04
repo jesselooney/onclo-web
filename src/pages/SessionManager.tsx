@@ -53,8 +53,8 @@ function SessionManager() {
   }
   const [suggestions, _] = createStore<string[]>(["suggestion one", "yeet"])
 
-  const [height, setHeight] = createSignal(0);
-  setInterval(() => setHeight(window.innerHeight), 100)
+  const [height, setHeight] = createSignal("");
+  setInterval(() => setHeight(document.getElementById("root")!.style.height), 100)
 
   return (
     <SessionsContext.Provider value={[sessions, setSessions]}>
